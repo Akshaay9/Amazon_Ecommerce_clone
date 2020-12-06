@@ -16,7 +16,7 @@
 }
 
 .search {
-    width: 60vw;
+    width: 55vw;
     height: 4.5vh;
     border: none;
     outline: none;
@@ -35,33 +35,79 @@
 
 .nav_details {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     margin-right: 12px;
 }
-.first>p{
+
+.first>p {
     font-size: 12px;
     font-weight: lighter;
-    
+
 }
-.second{
+
+.second {
     color: white;
     display: flex;
-   margin-top: 1px;
-   ;
+    margin-top: 1px;
 }
-.test3>p{
+
+.test3>p {
     margin-top: 0px;
     margin-left: 12px;
-    
+
 }
-.cartSize{
-    padding-left: 12px;margin-bottom: -4px; padding-bottom: -2px;
+
+.cartSize {
+    padding-left: 12px;
+    margin-bottom: -4px;
+    padding-bottom: -2px;
     color: peru;
-    
+
 }
-.nd{
+
+.nd {
     margin-top: 22px;
     margin-left: 2px;
     font-size: 18px;
+}
+
+.nav2 {
+    display: flex;
+    background-color: #232f3e;
+    color: white;
+    font-family: sans-serif;
+}
+
+.secondItem {
+    width: 15vw;
+    justify-content: space-around;
+    margin-left: 12px;
+    font-size: 13px;
+    padding: 2px;
+    
+}
+.firstItem{
+    width: 13vw;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.thirdItem{
+    width: 30vw;
+    text-align: center;
+    margin-top: 8px;
+}
+.locIcon{
+    margin-left: -15px;
+    margin-bottom: -12px;
+    
+}
+.address{
+    padding-left: 8px;
+}
+.poster{
+    width: 100vw;
+    height: 80vh;
+    z-index: -2;
+    /* object-fit: contain; */
 }
