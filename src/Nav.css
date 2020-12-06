@@ -1,0 +1,67 @@
+.logo {
+    width: 100px;
+    margin-top: 12px;
+    margin-left: 12px;
+    object-fit: contain;
+}
+
+.nav_bar {
+    background-color: #131921;
+    cursor: pointer;
+    position: sticky;
+}
+
+.nav_bar {
+    display: flex;
+}
+
+.search {
+    width: 60vw;
+    height: 4.5vh;
+    border: none;
+    outline: none;
+}
+
+.searchBar {
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+.first {
+    color: white;
+    margin-top: 9px;
+    margin-left: 52px;
+}
+
+.nav_details {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-right: 12px;
+}
+.first>p{
+    font-size: 12px;
+    font-weight: lighter;
+    
+}
+.second{
+    color: white;
+    display: flex;
+   margin-top: 1px;
+   ;
+}
+.test3>p{
+    margin-top: 0px;
+    margin-left: 12px;
+    
+}
+.cartSize{
+    padding-left: 12px;margin-bottom: -4px; padding-bottom: -2px;
+    color: peru;
+    
+}
+.nd{
+    margin-top: 22px;
+    margin-left: 2px;
+    font-size: 18px;
+}
