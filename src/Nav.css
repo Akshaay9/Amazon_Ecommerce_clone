@@ -9,6 +9,10 @@
     background-color: #131921;
     cursor: pointer;
     position: sticky;
+    height: 10vh;
+   z-index: 100;
+    top: 0;
+    /* width: 100%; */
 }
 
 .nav_bar {
@@ -23,7 +27,7 @@
 }
 
 .searchBar {
-    margin-top: 10px;
+    margin-top: 16px;
     margin-left: 12px;
 }
 
@@ -77,6 +81,11 @@
     background-color: #232f3e;
     color: white;
     font-family: sans-serif;
+    height: 7vh;
+    align-items: center;
+    position: sticky;
+
+
 }
 
 .secondItem {
@@ -85,29 +94,39 @@
     margin-left: 12px;
     font-size: 13px;
     padding: 2px;
-    
+
 }
-.firstItem{
+
+.firstItem {
     width: 13vw;
     justify-content: space-between;
-    margin-top: 8px;
+    margin-top: 1px;
 }
-.thirdItem{
-    width: 30vw;
-    text-align: center;
-    margin-top: 8px;
-}
-.locIcon{
+
+
+
+.locIcon {
     margin-left: -15px;
     margin-bottom: -12px;
-    
+
 }
-.address{
+
+.address {
     padding-left: 8px;
 }
-.poster{
+
+.poster {
     width: 100vw;
     height: 80vh;
     z-index: -2;
     /* object-fit: contain; */
+}
+.downloadImg{
+    width: 90%;
+    object-fit: contain;
+}
+.searchIcon{
+    color: #232f3e;
+    position: absolute;
+    left: 780px;
 }
