@@ -21,11 +21,11 @@ useEffect(()=>{
       items=items+prods.qty
       setTotalItem(items)
     })
-  },[cartList,totalItem,setTotalItem])
+  },[cartList,totalItem,setTotalItem,auth.onAuthStateChanged])
 
 useEffect(()=>{
 setTotalItem(0)
-},[!Array.isArray(cartList) ])
+},[!cartList.length])
 
 // search 
 const[searchterm,setSearchTerm]=useState("")

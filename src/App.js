@@ -7,6 +7,7 @@ import Search from "./components/cart/search/Search"
 import Login from "./Login"
 import { auth } from "./FireBase";
 import { useDispatch, useSelector } from "react-redux"
+import CheckOut from "./CheckOut"
 
 import {
   BrowserRouter,
@@ -69,6 +70,11 @@ function App() {
     <Nav/>
       <Nav2/>
    <Search/>
+    </Route>
+    <Route exact path="/checkout">
+    <Nav/>
+      <Nav2/>
+  <CheckOut/>
     </Route>
     
    </Switch>

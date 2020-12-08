@@ -2,8 +2,14 @@ import React,{useState,useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import CartList from "./CartList"
 import ".././Product.css"
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../../FireBase"
+
 
 function Cart() {
+  const { user } = useSelector((state) => state.products)
+  const history=useHistory()
+  // 
     const { cartList } = useSelector((state) => state.products)
     const [totalPrice,setTotalPrice]=useState(0)
 const [totalItem,setTotalItem]=useState(0)
@@ -18,13 +24,29 @@ useEffect(()=>{
     price=items+prods.qty*prods.price
     setTotalPrice(price)
     setTotalItem(items)
-    
-
   })
-
 },[cartList,totalPrice,setTotalPrice,totalItem,setTotalItem])
 
+// useEffect(()=>{
+//   setTotalPrice(0)
+//   setTotalItem(0)
+// },[!cartList.length])
 
+const proceedToHomePage=()=>{
+  if(user)
+  {
+history.push("/checkout")
+  }
+  if(!user)
+  {
+    history.push("/login")
+  }
+  if(!cartList.length)
+  {
+    alert("Please add items to cart")
+    history.push("/cart")
+  }
+}
 
 
 
@@ -35,7 +57,7 @@ useEffect(()=>{
       <div className="check">
         <p className="freeOder">Your order is eligible for free delivery</p>
         <h5 className="itemTotal">SubTotal:{totalItem} Item</h5><h2 className="priceTotal">Cost : `${totalPrice}`</h2>
-<button className="proceedToBuy">Proceed to buy</button>
+<button className="proceedToBuy" onClick={proceedToHomePage} >Proceed to buy.</button>
       </div></div>
 
         <div  className="products2" >
