@@ -3,12 +3,17 @@ import { useDispatch, useSelector } from "react-redux"
 import "./Nav.css"
 import "./App.css"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import {Link} from "react-router-dom"
+import {Link,useHistory} from "react-router-dom"
 import SearchIcon from '@material-ui/icons/Search';
+import { auth } from "./FireBase";
 
 function Nav() {
     const { cartList } = useSelector((state) => state.products)
+    const { user } = useSelector((state) => state.products)
+    const history=useHistory()
+    
     const disdpatch=useDispatch()
+
 const [totalItem,setTotalItem]=useState(0)
 useEffect(()=>{
     let items=0;
@@ -35,7 +40,17 @@ const searchHandler=()=>{
             searchterm
         }
     })
+    setSearchTerm("")
 
+
+}
+const logOut=()=>{
+    if(user)
+    {
+        auth.signOut()
+        history.push("/login")
+
+    }
 }
 
 
@@ -51,14 +66,19 @@ const searchHandler=()=>{
         <div className="searchBar">
             <input className="search" type="text" value={searchterm} onChange={(e)=>searchChange(e)} />
           <Link to="/search"> <SearchIcon onClick={()=>searchHandler()} className="searchIcon"  disabled={!searchterm} /></Link> 
-        </div>z
+        </div>
 
 <div className="nav_details">
 
+
+
+<Link to={!user&& "/login"}>
         <div className="first">
-            <p>Hello,</p>
-            <div className="2nd">Sign In</div>
-        </div>
+            <p>Hello,{user?.email}</p>
+            <div className="2nd" onClick={logOut} >{user?`Sign-out`:`Sign-in`}</div>
+        </div> </Link>
+
+
 
         <div className="first">
             <p>Returns</p>

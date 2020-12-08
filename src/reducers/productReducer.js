@@ -413,6 +413,7 @@ const initialState = {
     ],
     currentItem:null,
     searchList:[],
+    user:null,
 
 }
 const productReducer = (state = initialState, action) => {
@@ -477,12 +478,12 @@ const productReducer = (state = initialState, action) => {
                 return{
                     ...state,
                     searchList:itemSearch
-                    
-                    
-
-                    
-
                 }
+                case "SET_USER":
+                    return{
+                        ...state,
+                        user:action.user
+                    }
                 
               
 

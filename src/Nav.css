@@ -20,7 +20,7 @@
 }
 
 .search {
-    width: 55vw;
+    width: 50vw;
     height: 4.5vh;
     border: none;
     outline: none;
@@ -128,5 +128,5 @@
 .searchIcon{
     color: #232f3e;
     position: absolute;
-    left: 780px;
+    left: 720px;
 }
